@@ -199,7 +199,7 @@ function init() {
 
     e.preventDefault();
     const wordInput = document.getElementById('words').value || '';
-    const seedWordArray = wordInput.split('\n').map((w) => w.trim());
+    const seedWordArray = wordInput.split(',').map((w) => w.trim());
     if (seedWordArray.length < 5) {
       document.getElementById('error').textContent =
         'Please enter 5 or more words';
