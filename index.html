@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Anything Ipsum: the ipsum text generator">
+  <meta property="og:site_name" content="">
+  <meta property="og:url" content="https://sophiekoonin.github.io/anything-ipsum">
+  <meta property="og:description" content="Generate custom lorem ipsum placeholder text using a wordlist you provide!">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sophiekoonin.github.io/anything-ipsum/og-image.png">
   <title>Anything Ipsum - ipsum text generator</title>
   <link rel="stylesheet" href="style.css">
   <script defer="defer" src="generator.js"></script>
@@ -12,15 +18,14 @@
 
 <body>
   <header>
-    <h1>Anything Ipsum</h1>
+    <h1 class="title">Anything Ipsum</h1>
   </header>
   <main class="wrapper">
     <p>Paste in a list of words and turn them into a paragraph of lorem ipsum-style placeholder text.</p>
     <p>Copy the URL of this page to share your generator with someone!</p>
     <form id="form" class="form">
-      <label for="words">Ipsum words (minimum 5) - comma-separated and case sensitive</label>
+      <label for="words">Ipsum words (minimum 5) - comma-separated, capitalisation matters</label>
       <textarea id="words"></textarea>
-
       <label for="paras">Number of paragraphs</label>
       <input id="paras" min="1" type="number" value="1" />
       <span id="error"></span>
@@ -30,12 +35,13 @@
       <label for="form-output">Result</label>
       <output id="form-output" for="form">
         <textarea readonly id="output"></textarea>
-      </output <div>
-      <button id="copy-to-clipboard" type="button">Copy to clipboard</button><span id="confirm"></span>
-    </div>
+      </output>
+      <div>
+        <button id="copy-to-clipboard" type="button">Copy to clipboard</button><span id="confirm"></span>
+      </div>
   </main>
   <footer>
-    Made by Sophie
+    Made with ❤ by <a href="https://localghost.dev" target="blank" rel="noopener noreferrer">Sophie</a>
   </footer>
 </body>
 

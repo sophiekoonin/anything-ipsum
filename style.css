@@ -8,6 +8,12 @@ header {
   padding: 2rem 0;
 }
 
+.title {
+  color: rgb(6, 139, 156);
+  font-size: 4rem;
+  text-transform: lowercase;
+}
+
 label {
   margin-bottom: 0.5rem;
 }
@@ -17,8 +23,12 @@ h1 {
   margin: 2rem 0;
 }
 
+output {
+  display: flex;
+}
+
 textarea#output {
-  width: 60%;
+  width: 100%;
 }
 
 textarea {
@@ -99,6 +109,14 @@ footer {
   text-align: center;
 }
 
+a {
+  font-weight: bold;
+  color: rgb(15, 85, 61);
+}
+
+a:hover {
+  color: rgb(19, 143, 100);
+}
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -112,6 +130,7 @@ footer {
 }
 #copy-to-clipboard {
   appearance: none;
+  cursor: pointer;
   border: 0;
   background: none;
   font-size: 1rem;
@@ -119,4 +138,7 @@ footer {
   color: rgb(19, 143, 100);
   padding-top: 0.5rem;
   margin-right: 1rem;
+}
+#copy-to-clipboard:hover {
+  color: rgb(103, 173, 150);
 }

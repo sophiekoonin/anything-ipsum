@@ -182,6 +182,9 @@ function init() {
   if (queryStringWords != null) {
     const seedWords = decodeURIComponent(queryStringWords);
     document.getElementById('words').value = seedWords;
+    document.getElementById('output').value = generate(
+      seedWords.split(',').map((w) => w.trim())
+    );
   }
   document
     .getElementById('copy-to-clipboard')
