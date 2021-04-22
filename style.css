@@ -1,0 +1,122 @@
+.form {
+  display: inline-flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+header {
+  padding: 2rem 0;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+textarea#output {
+  width: 60%;
+}
+
+textarea {
+  height: 200px;
+}
+input,
+textarea {
+  border-radius: 6px;
+  padding: 6px 16px;
+  border: 1px solid rgb(103, 173, 150);
+}
+
+#error {
+  margin-top: 1rem;
+  color: rgb(117, 14, 14);
+  font-weight: bold;
+}
+
+.wrapper {
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.form label:not(:first-of-type) {
+  padding-top: 1rem;
+}
+
+button#generate {
+  margin-top: 1.5rem;
+  padding: 12px 16px;
+  max-width: 150px;
+  border: 1px solid rgb(19, 143, 100);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: rgb(19, 143, 100);
+}
+
+input#paras {
+  width: 25px;
+  font-size: 1.1rem;
+  padding: 12px 16px;
+}
+
+.output-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+@media screen and (min-width: 560px) {
+  .wrapper {
+    max-width: 75%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .wrapper {
+    max-width: 40%;
+    padding: 2.5rem;
+  }
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: rgb(195, 241, 226);
+}
+
+footer {
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+#copy-to-clipboard {
+  appearance: none;
+  border: 0;
+  background: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(19, 143, 100);
+  padding-top: 0.5rem;
+  margin-right: 1rem;
+}
