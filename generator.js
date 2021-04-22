@@ -183,6 +183,10 @@ function init() {
     .addEventListener('click', (e) => {
       copyToClipboard(e);
     });
+
+  document.getElementById('words').addEventListener('change', (e) => {
+    generateQueryString(e.target.value);
+  });
   document.getElementById('form').addEventListener('submit', (e) => {
     document.getElementById('error').textContent = '';
     document.getElementById('confirm').textContent = '';
@@ -213,4 +217,10 @@ function copyToClipboard() {
   document.getElementById(
     'confirm'
   ).innerHTML = `<span class="visually-hidden">Copied to clipboard</span><span aria-hidden="true">✅</span>`;
+}
+
+function generateQueryString(content) {
+  const loc = new URL(window.location);
+  loc.searchParams.set('words', encodeURIComponent(content));
+  window.history.pushState({}, null, loc);
 }
