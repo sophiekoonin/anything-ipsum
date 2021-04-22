@@ -179,8 +179,10 @@ function gaussMS(mean, standard_deviation) {
 
 function init() {
   const queryStringWords = new URL(window.location).searchParams.get('words');
-  const seedWords = decodeURIComponent(queryStringWords);
-  document.getElementById('words').value = seedWords;
+  if (queryStringWords != null) {
+    const seedWords = decodeURIComponent(queryStringWords);
+    document.getElementById('words').value = seedWords;
+  }
   document
     .getElementById('copy-to-clipboard')
     .addEventListener('click', (e) => {
